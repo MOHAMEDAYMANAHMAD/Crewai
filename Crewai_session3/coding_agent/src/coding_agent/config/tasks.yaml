@@ -1,0 +1,62 @@
+research_task:
+  description: >
+    Research how modern social media platforms (Facebook-like systems) are built.
+    Focus on technical components such as:
+    - Authentication & authorization
+    - News feed generation
+    - User relationships (friends/followers)
+    - Post storage and retrieval
+    - Likes, comments, and notifications
+    - Real-time updates and messaging
+    - Scalability and caching strategies
+  expected_output: >
+    A structured list of the 10 most critical technical concepts,
+    each with a short explanation and practical relevance.
+  agent: researcher
+
+
+write_report_task:
+  description: >
+    Convert the research into a full technical system design for a Facebook-like application.
+    The report must include:
+    - Core features and their responsibilities
+    - Backend architecture (services and data flow)
+    - Database design (main entities and relations)
+    - API structure (main endpoints conceptually)
+    - Frontend module breakdown
+    - Security considerations
+    - Scalability strategy
+  expected_output: >
+    A structured Markdown technical report with sections:
+    Overview, Features, Architecture, Data Model, APIs, Security, Scalability.
+  agent: write_report
+
+
+vali_info_task:
+  description: >
+    Review the technical report and validate that:
+    - The architecture is realistic
+    - The data model makes sense
+    - The flow between components is consistent
+    - No generic or non-technical claims remain
+    Identify risks such as performance issues or security gaps.
+  expected_output: >
+    A validated version of the report with an added section:
+    "Validation & Risk Assessment".
+  agent: vali_info
+
+
+summarizer_task:
+  description: >
+    Summarize the validated report into a practical execution plan.
+    Provide:
+    - A short executive summary
+    - A step-by-step development roadmap
+    - Key technical decisions
+  expected_output: >
+    One concise paragraph summary,
+    followed by:
+    - Strategic Roadmap (bulleted steps)
+    - Key Takeaways
+    - Final Conclusion
+  agent: summarizer

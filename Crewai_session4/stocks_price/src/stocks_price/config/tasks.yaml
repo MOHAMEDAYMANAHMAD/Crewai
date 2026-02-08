@@ -1,0 +1,15 @@
+analysis_task:
+  description: >
+    1. Retrieve the latest financial data for {topic} using the provided tools.
+    2. Focus on key metrics: Market Cap, P/E Ratio, and 52-week High/Low.
+    3. Compare the current price to the historical trends (52-week range) to identify the stock's momentum.
+    4. Provide a reasoning for why the P/E ratio is considered high or low in the current market context of {current_year}.
+    5. Evaluate the company's summary to factor in brand strength and sector stability.
+    **Important**: Format all large numbers to be easily readable (e.g., use "$4.03 Trillion" instead of "4,035,609,624,576" and "$150.5 Billion" instead of long digit strings).
+  expected_output: >
+    A structured financial investment report in Markdown format including:
+    - **Executive Summary**: A quick look at the stock's health.
+    - **Key Metrics Table**: A clean table with all the numbers.
+    - **Detailed Analysis**: Insights into valuation (Overvalued/Undervalued).
+    - **Investment Verdict**: A final recommendation (Buy, Hold, or Wait for Dip) with a brief justification.
+  agent: analyst_agent
